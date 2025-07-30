@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "fonts";
+
+:root {
+  --font: "Exo 2", sans-serif;
+  --font-size: 18px;
+  --color-primary: #505258;
+  --color-secondary: #a2acb7;
+  --color-black: #2b2b2b;
+  --color-green: #c7f742;
+  --color-light-grey: #eaebec;
+  --color-bg: #f3f3f3;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: var(--font-size);
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+}
+
+th,
+td {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.table-info {
+  background-color: var(--color-secondary);
+  color: var(--color-bg);
+  padding: 6px 17px;
+  line-height: 22px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.table-info:hover {
+  background-color: var(--color-primary);
+}
+
+.mat-sort-header-arrow svg {
+  display: none !important;
+  // opacity: 1 !important;
+}

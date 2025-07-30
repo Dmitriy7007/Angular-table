@@ -1,0 +1,67 @@
+@use "@angular/material" as mat;
+
+:root {
+  @include mat.table-overrides(
+    (
+      header-headline-color: var(--color-secondary),
+      row-item-label-text-color: var(--color-primary),
+      row-item-outline-width: 0,
+      header-headline-font: var(--font),
+      row-item-label-text-font: var(--font),
+      header-headline-size: var(--font-size),
+      row-item-label-text-size: var(--font-size),
+      header-headline-weight: 400,
+      row-item-label-text-weight: 400,
+    )
+  );
+
+  @include mat.paginator-overrides(
+    (
+      container-text-color: orange,
+      container-background-color: red,
+    )
+  );
+  @include mat.button-overrides(
+    (
+      filled-container-color: var(--color-green),
+      filled-label-text-color: var(--color-black),
+      filled-horizontal-padding: 17px,
+      filled-container-height: 34px,
+      filled-container-shape: 10px,
+      filled-state-layer-color: var(--color-black),
+      filled-hover-state-layer-opacity: 0.1,
+      filled-focus-state-layer-opacity: 0.2,
+      filled-pressed-state-layer-opacity: 0.3,
+
+      tonal-container-color: var(--color-light-grey),
+      tonal-label-text-color: var(--color-grey),
+      tonal-horizontal-padding: 17px,
+      tonal-container-height: 34px,
+      tonal-container-shape: 10px,
+      tonal-state-layer-color: var(--color-black),
+      tonal-hover-state-layer-opacity: 0.1,
+      tonal-focus-state-layer-opacity: 0.2,
+      tonal-pressed-state-layer-opacity: 0.3,
+    )
+  );
+  @include mat.fab-overrides(
+    (
+      container-color: var(--color-light-grey),
+      foreground-color: var(--color-black),
+      extended-container-shape: 10px,
+      extended-container-height: 34px,
+      state-layer-color: var(--color-black),
+      hover-state-layer-opacity: 0.1,
+      focus-state-layer-opacity: 0.2,
+      pressed-state-layer-opacity: 0.3,
+    )
+  );
+}
+
+.mat-mdc-row {
+  border-bottom: 1px dashed var(--color-secondary);
+}
+
+.mat-mdc-header-row {
+  border-bottom: 1px solid var(--color-secondary);
+}

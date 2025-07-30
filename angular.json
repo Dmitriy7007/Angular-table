@@ -25,7 +25,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"]
+            "styles": ["src/style/styles.scss", "src/style/material-ui.scss"]
           },
           "configurations": {
             "production": {
@@ -76,7 +76,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"]
+            "styles": ["src/style/styles.scss", "src/style/material-ui.scss"]
           }
         }
       }
