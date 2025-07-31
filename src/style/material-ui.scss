@@ -56,6 +56,14 @@
       pressed-state-layer-opacity: 0.3,
     )
   );
+
+  @include mat.select-overrides(
+    (
+      trigger-text-font: var(--font),
+      trigger-text-size: 16px,
+      trigger-text-tracking: normal,
+    )
+  );
 }
 
 .mat-mdc-row {
@@ -64,4 +72,38 @@
 
 .mat-mdc-header-row {
   border-bottom: 1px solid var(--color-secondary);
+}
+
+.mat-sort-header-arrow,
+.mat-sort-header-arrow svg {
+  display: none !important;
+}
+
+.mat-mdc-select-arrow svg {
+  background-image: url("/assets/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 7px 4px;
+  width: 7px;
+  height: 4px;
+  border: none;
+  color: transparent;
+}
+
+.mdc-list-item__primary-text {
+  font-size: 14px !important;
+}
+
+.mat-mdc-option {
+  padding: 0 5px !important;
+}
+
+.mat-mdc-select-panel,
+.mat-mdc-select-panel-above,
+.cdk-overlay-pane {
+  width: 48px !important;
+}
+
+.mat-pseudo-checkbox {
+  margin-left: 0 !important;
 }

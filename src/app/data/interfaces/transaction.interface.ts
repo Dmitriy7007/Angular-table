@@ -1,6 +1,6 @@
 export interface Transaction {
   date: string;
-  iziId: number;
+  iziId: string;
   phone: string;
   documentNumber: string;
   paymentItem: string;

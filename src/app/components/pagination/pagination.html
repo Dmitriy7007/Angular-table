@@ -1,0 +1,31 @@
+<div class="custom-paginator mt-4 flex items-center justify-between w-155 mx-auto">
+  <div class="text-lg text-[var(--color-secondary)]">
+    {{ paginator.pageIndex * paginator.pageSize + 1 }}
+    -
+    {{ getMinValue((paginator.pageIndex + 1) * paginator.pageSize, paginator.length) }}
+    ({{ paginator.length }})
+  </div>
+
+  <div class="flex items-center gap-1">
+    <button (click)="goToFirstPage()" [disabled]="paginator.pageIndex === 0" class="text-lg">«</button>
+    <button (click)="goToPreviousPage()" [disabled]="paginator.pageIndex === 0" class="text-lg">‹</button>
+
+    @for (page of getPageRange(); track page) {
+    <button [class.active]="paginator.pageIndex === page" (click)="goToPage(page)" class="text-lg">
+      {{ page + 1 }}
+    </button>
+    }
+
+    <button (click)="goToNextPage()" [disabled]="paginator.pageIndex >= pageCount - 1" class="text-lg">›</button>
+    <button (click)="goToLastPage()" [disabled]="paginator.pageIndex >= pageCount - 1" class="text-lg">»</button>
+  </div>
+
+  <div
+    class="flex items-center gap-2 w-12 px-2 border rounded border-[var(--color-light-grey)] text-[var(--color-secondary)] text-base">
+    <mat-select [(value)]="paginator.pageSize" (valueChange)="onPageSizeChange()">
+      @for (size of paginator.pageSizeOptions; track size) {
+      <mat-option [value]="size">{{ size }}</mat-option>
+      }
+    </mat-select>
+  </div>
+</div>
